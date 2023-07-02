@@ -31,8 +31,8 @@ public class AcmeBankTests {
     // It runs the test from a main function, not through a test framework.
 
     // Test constants
-    private final static boolean USE_ULTRAFAST_GRID = true;
-    private final static boolean USE_EXECUTION_CLOUD = false;
+    private final static boolean USE_ULTRAFAST_GRID = false;
+    private final static boolean USE_EXECUTION_CLOUD = true;
 
     // Test control inputs to read once and share for all tests
     private static String applitoolsApiKey;
