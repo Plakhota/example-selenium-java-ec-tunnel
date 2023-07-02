@@ -114,6 +114,7 @@ public class AcmeBankTests {
 
         if (USE_EXECUTION_CLOUD) {
             // Open the browser remotely in the Execution Cloud.
+            // options.setCapability("applitools:tunnel", "true");
             driver = new RemoteWebDriver(new URL(Eyes.getExecutionCloudURL()), options);
         }
         else {
