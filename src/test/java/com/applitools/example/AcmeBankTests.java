@@ -189,7 +189,7 @@ public class AcmeBankTests {
         eyes.closeAsync();
 
         // Quit the WebDriver instance.
-        driver.quit();
+        //driver.quit();
 
         // Warning: `eyes.closeAsync()` will NOT wait for visual checkpoints to complete.
         // You will need to check the Eyes Test Manager for visual results per checkpoint.
