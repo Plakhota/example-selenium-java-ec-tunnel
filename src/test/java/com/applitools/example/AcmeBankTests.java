@@ -36,6 +36,7 @@ public class AcmeBankTests {
 
     // Test control inputs to read once and share for all tests
     private static String applitoolsApiKey;
+    private static final String serverUrl = "https://mfseyesapi.applitools.com";
     private static boolean headless;
 
     // Applitools objects to share for all tests
@@ -85,7 +86,7 @@ public class AcmeBankTests {
         // If you don't explicitly set the API key with this call,
         // then the SDK will automatically read the `APPLITOOLS_API_KEY` environment variable to fetch it.
         config.setApiKey(applitoolsApiKey);
-        config.setServerUrl("https://mfseyesapi.applitools.com");
+        config.setServerUrl(serverUrl);
 
         // Set the batch for the config.
         config.setBatch(batch);
@@ -116,9 +117,8 @@ public class AcmeBankTests {
         if (USE_EXECUTION_CLOUD) {
             // Open the browser remotely in the Execution Cloud.
 
-            options.setCapability("applitools:eyesServerUrl", "https://mfseyes.applitools.com");
+            options.setCapability("applitools:eyesServerUrl", serverUrl);
             options.setCapability("applitools:apiKey", applitoolsApiKey);
-            options.setCapability("applitools:tunnel", "true");
             options.setCapability("applitools:tunnel", "true");
             driver = new RemoteWebDriver(new URL(Eyes.getExecutionCloudURL()), options);
         }
